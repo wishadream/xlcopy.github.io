@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>一些面试题 | 薛定谔的快乐</title><meta name="keywords" content="vue,http,css3,ES6"><meta name="author" content="潇雷好棒哦"><meta name="copyright" content="潇雷好棒哦"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1、localStorage，sessionStorage，cookie区别 localStorage: 的生命周期是永久的，关闭页面或浏览器之后 localStorage 中的数据也不会消失。localStorage 除非主动删除数据，否则数据永远不会消失 sessionStorage: sessionStorage 的生命周期是仅在当前会话下有效。sessionStorage 引入了一个“浏览">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一些面试题">
+<meta property="og:url" content="https://xlcopy.github.io/2021/04/29/%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E9%A2%98/index.html">
+<meta property="og:site_name" content="薛定谔的快乐">
+<meta property="og:description" content="1、localStorage，sessionStorage，cookie区别 localStorage: 的生命周期是永久的，关闭页面或浏览器之后 localStorage 中的数据也不会消失。localStorage 除非主动删除数据，否则数据永远不会消失 sessionStorage: sessionStorage 的生命周期是仅在当前会话下有效。sessionStorage 引入了一个“浏览">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.imgdb.cn/item/607afe898322e6675c6d4269.jpg">
+<meta property="article:published_time" content="2021-04-29T13:34:43.000Z">
+<meta property="article:modified_time" content="2021-04-29T13:56:38.237Z">
+<meta property="article:author" content="潇雷好棒哦">
+<meta property="article:tag" content="vue">
+<meta property="article:tag" content="http">
+<meta property="article:tag" content="css3">
+<meta property="article:tag" content="ES6">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.imgdb.cn/item/607afe898322e6675c6d4269.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://xlcopy.github.io/2021/04/29/%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E9%A2%98/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-04-29 21:56:38'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/images/loading.gif" data-original="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/foot/"><i class="fa-fw fas fa-paw"></i><span> 足迹</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://img.imgdb.cn/item/607afe898322e6675c6d4269.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">薛定谔的快乐</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/foot/"><i class="fa-fw fas fa-paw"></i><span> 足迹</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/photos/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">一些面试题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-29T13:34:43.000Z" title="发表于 2021-04-29 21:34:43">2021-04-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-04-29T13:56:38.237Z" title="更新于 2021-04-29 21:56:38">2021-04-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="1、localStorage，sessionStorage，cookie区别"><a href="#1、localStorage，sessionStorage，cookie区别" class="headerlink" title="1、localStorage，sessionStorage，cookie区别"></a>1、localStorage，sessionStorage，cookie区别</h3><p><strong><code> localStorage:</code></strong> 的生命周期是永久的，关闭页面或浏览器之后 localStorage 中的数据也不会消失。localStorage 除非主动删除数据，否则数据永远不会消失</p>
+<p><strong><code>sessionStorage:</code></strong> sessionStorage 的生命周期是仅在当前会话下有效。sessionStorage 引入了一个“浏览器窗口”的概念，sessionStorage 是在同源的窗口中始终存在的数据。只要这个浏览器窗口没有关闭，即使刷新页面或者进入同源另一个页面，数据依然存在。但是 sessionStorage 在关闭了浏览器窗口后就会被销毁。同时独立的打开同一个窗口同一个页面，sessionStorage 也是不一样的</p>
+<p><strong><code>cookie:</code></strong> cookie生命期为只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。 存放数据大小为4K左右, 有个数限制（各浏览器不同），一般不能超过20个。缺点是不能储存大数据且不易读取</p>
+<h3 id="2、http2新特性"><a href="#2、http2新特性" class="headerlink" title="2、http2新特性"></a>2、http2新特性</h3><h4 id="1-二进制分帧"><a href="#1-二进制分帧" class="headerlink" title="1.二进制分帧"></a><strong>1.二进制分帧</strong></h4><p> http1.x是文本格式传输，http2二进制格式传输，并且被切分未过个帧发送，帧可以根据头部流标识重新组装。</p>
+<p>HTTP 2.0 会将所有传输的信息分割为更小的消息和帧,并对它们采用二进制格式的编码 ，其中HTTP1.x的首部信息会被封装到Headers帧，而我们的request body则封装到Data帧里面。</p>
+<h4 id="2-单一长连接"><a href="#2-单一长连接" class="headerlink" title="2. 单一长连接"></a><strong>2. 单一长连接</strong></h4><p> 同一个域名使用一个TCP连接,(http1.x 使用6-8个TCP连接，浏览器为减少消耗，进行的限制)，无论请求多少个资源，能减少握手带来的延时，减少创建多个TCP连接带来的网络开销，提高吞吐量。</p>
+<h4 id="3-多路复用"><a href="#3-多路复用" class="headerlink" title="3. 多路复用"></a><strong>3. 多路复用</strong></h4><p> http1.x相当于单车道，同一个连接上的请求串行执行</p>
+<p> http2相当于多车道，同一个连接上的请求可以并行执行。由于请求被二进制分帧，每个帧都有流编号。同一个请求和响应的帧必须是有序的，不同的请求的帧可以互相穿插。然后按照流编号重组。</p>
+<h4 id="4-头部压缩"><a href="#4-头部压缩" class="headerlink" title="4.头部压缩"></a><strong>4.头部压缩</strong></h4><p> 用HPACK压缩头部，使用首部表来进行首部字段存储，只有当首部表中的数据变更或为发送过时，才会发送http头部字段。</p>
+<p>首部表分为静态表和动态表，静态表包含常用字段，动态表包含自定义字段等非常用字段，当新增或改变字段时，会增加或修改动态表中的数据。</p>
+<p>http请求和响应都是由【状态行、请求/响应头部、消息主题】三部分组成的。 一般而言，消息主体都会经过gzip压缩，或者本身传输的就是压缩过后的二进制文件（如图片、音频等），但是状态行和头部多是没有经过任何压缩，而是直接以纯文本的方式进行传输的。</p>
+<p>然而，随着web功能越来越复杂，请求数量越来越多，随之而来的就是头部的流量越来越多，并且在建立初次链接之后的链接也要发送user-agent等信息，是在是一种浪费。</p>
+<p><strong>因此，http2提出了对请求和响应的头部进行压缩，即不再只是压缩主题部分，这种压缩方式就是HAPCK — 其设计简单而灵活。</strong></p>
+<p>通过压缩，头部大小可以减少一半之多，如果后面重复发送请求，那么可能压缩后的头部大小只有原始大小的 1/10。</p>
+<h4 id="5-服务端推送"><a href="#5-服务端推送" class="headerlink" title="5.服务端推送"></a><strong>5.服务端推送</strong></h4><p> 客户端请求资源X,服务端判断客户端还需要别的资源，可以主动推送这些资源。客户端需要显式允许服务器启用推送功能。并且，客户端可以发送一个RST_STREAM帧来中断推送流，推送受同源策略限制</p>
+<p> 例如，请求index.html页面时，服务器同时将index.js和index.css push给浏览器，当浏览器</p>
+<p>解析html到请求index.css和index.js时，可以直接从缓存中读取</p>
+<h3 id="3、SASS功能"><a href="#3、SASS功能" class="headerlink" title="3、SASS功能"></a>3、SASS功能</h3><p>sass常用的功能：1：<code>变量赋值</code></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span>：嵌套：（<span class="number">1</span>.选择器嵌套 <span class="number">2</span>.属性嵌套）</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span>：混合：<span class="keyword">@mixin</span> center-block &#123;</span><br><span class="line">              <span class="attribute">margin-left</span>:auto;</span><br><span class="line">              <span class="attribute">margin-right</span>:auto;</span><br><span class="line">          &#125;</span><br><span class="line">         <span class="selector-class">.demo</span>&#123;</span><br><span class="line">              <span class="keyword">@include</span> center-block;</span><br><span class="line">          &#125;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span>：继承：<span class="keyword">@extend</span></span><br><span class="line">         h1&#123;</span><br><span class="line">            <span class="attribute">border</span>: <span class="number">4px</span> solid <span class="number">#ff9aa9</span>;</span><br><span class="line">           &#125; </span><br><span class="line">         <span class="selector-class">.speaker</span>&#123;</span><br><span class="line">                <span class="keyword">@extend</span> h1;</span><br><span class="line">                <span class="attribute">border-width</span>: <span class="number">2px</span>;</span><br><span class="line">           &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、vue-router-的使用步骤"><a href="#4、vue-router-的使用步骤" class="headerlink" title="4、vue router 的使用步骤"></a>4、vue router 的使用步骤</h4><p>第一步，引入vue 文件和vue router文件。</p>
+<p>第二步，放入router-link标签</p>
+<p>第三部，放入router-view占位符</p>
+<p>第四步，定义路由组件</p>
+<p>第五步，定义路由规则，并创建路由实例</p>
+<h3 id="5、ES6新特性"><a href="#5、ES6新特性" class="headerlink" title="5、ES6新特性"></a>5、ES6新特性</h3><p>1、箭头操作符 =&gt;；</p>
+<p>2、对类class的支持（constructor构造函数）；</p>
+<p>3、不定参数…x；let和const关键字；</p>
+<p>4、for of遍历；</p>
+<p>5、模块的支持import；</p>
+<p>6、promise异步函数的处理模式(pending等待中；<code>resolve</code>返回成功，<code>reject</code>返回失败)；</p>
+<p>7、模板字面量 ··（1左边的按键），以前是用+号串联</p>
+<p>8、解构赋值<br>在ES6中,可以使用解构从数组和对象提取值并赋值给独特的变量</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> point = [<span class="number">10</span>, <span class="number">25</span>, -<span class="number">34</span>];</span><br><span class="line"><span class="keyword">const</span> [x, y, z] = point;</span><br><span class="line"><span class="built_in">console</span>.log(x, y, z);</span><br></pre></td></tr></table></figure>
+
+<p>9、展开运算符<br>用三个连续的点 (…) 表示）是 ES6 中的新概念，使你能够将字面量对象展开为多个元素</p>
+<h3 id="6、Set、WeakSet、Map、WeakMap"><a href="#6、Set、WeakSet、Map、WeakMap" class="headerlink" title="6、Set、WeakSet、Map、WeakMap"></a>6、Set、WeakSet、Map、WeakMap</h3><ul>
+<li><code>Set</code><ul>
+<li>成员唯一、无序且不重复</li>
+<li>[value, value]，键值与键名是一致的（或者说只有键值，没有键名）</li>
+<li>可以遍历，方法有：add、delete、has</li>
+</ul>
+</li>
+<li><code>WeakSet</code><ul>
+<li>成员都是对象</li>
+<li>成员都是弱引用，可以被垃圾回收机制回收，可以用来保存DOM节点，不容易造成内存泄漏</li>
+<li>不能遍历，方法有add、delete、has</li>
+</ul>
+</li>
+<li><code>Map</code><ul>
+<li>本质上是键值对的集合，类似集合</li>
+<li>可以遍历，方法很多可以跟各种数据格式转换</li>
+</ul>
+</li>
+<li><code>WeakMap</code><ul>
+<li>只接受对象作为键名（null除外），不接受其他类型的值作为键名</li>
+<li>键名是弱引用，键值可以是任意的，键名所指向的对象可以被垃圾回收，此时键名是无效的</li>
+<li>不能遍历，方法有get、set、has、delete</li>
+</ul>
+</li>
+</ul>
+<h3 id="7、reduce实现数组求和"><a href="#7、reduce实现数组求和" class="headerlink" title="7、reduce实现数组求和"></a>7、reduce实现数组求和</h3><p><strong>对数组中的所有元素调用指定的回调函数。该回调函数的返回值为累积结果，并且此返回值在下一次调用该回调函数时作为参数提供。</strong></p>
+<p><strong>语法： array1.reduce(callbackfn[, initialValue])</strong></p>
+<p><code>reduce()</code>方法接收<code>callbackfn</code>函数，而这个函数包含四个参数：</p>
+<p>　　function callbackfn(preValue,curValue,index,array){}</p>
+<ul>
+<li><strong><code>preValue</code></strong>: 上一次调用回调返回的值，或者是提供的初始值（initialValue）</li>
+<li><strong><code>curValue</code></strong>: 数组中当前被处理的数组项</li>
+<li><strong><code>index</code></strong>: 当前数组项在数组中的索引值</li>
+<li><strong><code>array</code></strong>: 调用 <code>reduce()</code>方法的数组</li>
+</ul>
+<p>回调函数第一次执行时，<code>preValue</code> 和 <code>curValue</code> 可以是一个值，如果 <code>initialValue</code> 在调用 <code>reduce()</code> 时被提供，那么第一个 <code>preValue</code> 等于 <code>initialValue</code> ，并且<code>curValue</code> 等于数组中的第一个值；如果<code>initialValue</code> 未被提供，那么<code>preValue</code> 等于数组中的第一个值，`curValue等于数组中的第二个值。eg:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]; </span><br><span class="line">arr.reduce(<span class="function"><span class="keyword">function</span> (<span class="params">preValue,curValue,index,array</span>) </span>&#123; </span><br><span class="line">    <span class="keyword">return</span> preValue + curValue; </span><br><span class="line">&#125;); </span><br></pre></td></tr></table></figure>
+
+<p>reduce实现数组求和：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]; </span><br><span class="line"><span class="built_in">Array</span>.prototype.sum = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123; </span><br><span class="line">    <span class="keyword">var</span> sumResult = <span class="number">0</span>; </span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.reduce(<span class="function"><span class="keyword">function</span> (<span class="params">preValue, curValue</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">return</span> sumResult = preValue + curValue; </span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> sumResult;</span><br><span class="line">&#125; </span><br><span class="line"><span class="built_in">console</span>.log(arr.sum());</span><br></pre></td></tr></table></figure>
+
+<h3 id="8、vue-router中两种模式的区别？解释原理？"><a href="#8、vue-router中两种模式的区别？解释原理？" class="headerlink" title="8、vue router中两种模式的区别？解释原理？"></a>8、vue router中两种模式的区别？解释原理？</h3><p><strong>一种是hash模式 一种是history模式</strong></p>
+<p><strong><code>hash</code></strong> ——即地址栏URL中的#符号<br>比如这个URL：<a target="_blank" rel="noopener" href="http://www.baidu.com/#/hello">http://www.baidu.com/#/hello</a>, hash 的值为#/hello。它的特点在于：hash 虽然出现URL中，但不会被包含在HTTP请求中，对后端完全没有影响，因此改变hash不会重新加载页面。<br><strong><code>history</code></strong> ——利用了HTML5 History Interface 中新增的pushState() 和replaceState() 方法。<br>（需要特定浏览器支持）这两个方法应用于浏览器的历史记录站，在当前已有的back、forward、go 的基础之上，它们提供了对历史记录进行修改的功能。只是当它们执行修改是，虽然改变了当前的URL，但你浏览器不会立即向后端发送请求。</p>
+<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p><strong>hash的原理是采用hashchange事件，</strong><br>可以在window监听hash的变化。我们在url后面随便添加一个#xx触发这个事件。</p>
+<p><strong>history的原理是H5的几个新API</strong><br>history.pushState(data,title,url)：在浏览器中新增一条历史记录；<br>data会在onpopstate事件触发时作为参数传递过去，title为页面标题，url为页面地址；</p>
+<p>history.replaceState(data,title,url)：在浏览器中替换当前历史记录；<br>data会在onpopstate事件触发时作为参数传递过去，title为页面标题，url为页面地址；</p>
+<p>history.length()：当前历史列表中的历史记录条数；</p>
+<p>window.onpopstate：实际上popstate是一个浏览器内置的点击事件，响应pushState和replaceState的触发调用；</p>
+<p>history.back(-1):返回到当前页的上一页(原页面表单中的内容会保留)</p>
+<p>history.back(0):页面刷新</p>
+<p>history.back(1):当前页前进一页</p>
+<p>history.go(-1): 返回到当前页的上一页(原页面表单中的内容会丢失，效果基本和history.back(-1)一样</p>
+<p>history.forward():当前页面前进一页(和history.back(1)效果一样</p>
+<p>此外，history方法可以直接调用，例：history.pushState()，也可以用window.history.pushState()来调用。因为history是属于浏览器中的子对象，两种调用方法都是生效的；</p>
+<h3 id="9、跨域相关"><a href="#9、跨域相关" class="headerlink" title="9、跨域相关"></a>9、跨域相关</h3><h4 id="同源策略："><a href="#同源策略：" class="headerlink" title="同源策略："></a>同源策略：</h4><p>所谓同源是指”协议+域名+端口”三者相同，即便两个不同的域名指向同一个ip地址，也非同源。<br>同源策略是浏览器的一个安全功能，不同源的客户端脚本在没有明确授权的情况下，不能读写对方资源。<br>同源策略的限制：<br>1.Cookie、LocalStorage 和 IndexDB 无法读取<br>2.DOM 和 Js对象无法获得<br>3.AJAX 请求不能发送</p>
+<h4 id="1、通过jsonp跨域"><a href="#1、通过jsonp跨域" class="headerlink" title="1、通过jsonp跨域"></a><strong>1、通过jsonp跨域</strong></h4><p>通常为了减轻web服务器的负载，我们把js、css，img等静态资源分离到另一台独立域名的服务器上，在html页面中再通过相应的标签从不同域名下加载静态资源，而被浏览器允许，基于此原理，我们可以通过动态创建script，再请求一个带参网址实现跨域通信。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">原生实现</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">&#x27;script&#x27;</span>);</span><br><span class="line">script.type = <span class="string">&#x27;text/javascript&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 传参一个回调函数名给后端，方便后端返回时执行这个在前端定义的回调函数</span></span><br><span class="line">script.src = <span class="string">&#x27;http://www.domain2.com:8080/login?user=admin&amp;callback=handleCallback&#x27;</span>;</span><br><span class="line"><span class="built_in">document</span>.head.appendChild(script);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 回调执行函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleCallback</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">    alert(<span class="built_in">JSON</span>.stringify(res));</span><br><span class="line">&#125;</span><br><span class="line"> &lt;/script&gt;</span><br><span class="line"></span><br><span class="line">服务端返回如下（返回时即执行全局函数）：</span><br><span class="line">handleCallback(&#123;<span class="string">&quot;status&quot;</span>: <span class="literal">true</span>, <span class="string">&quot;user&quot;</span>: <span class="string">&quot;admin&quot;</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、-document-domain-iframe跨域"><a href="#2、-document-domain-iframe跨域" class="headerlink" title="2、 document.domain + iframe跨域"></a><strong>2、 document.domain + iframe跨域</strong></h4><p>此方案仅限主域相同，子域不同的跨域应用场景。<br>实现原理：两个页面都通过js强制设置document.domain为基础主域，就实现了同域。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">父窗口：</span><br><span class="line">&lt;iframe id=<span class="string">&quot;iframe&quot;</span> src=<span class="string">&quot;http://child.domain.com/b.html&quot;</span>&gt;&lt;/iframe&gt;&lt;script&gt;</span><br><span class="line"><span class="built_in">document</span>.domain = <span class="string">&#x27;domain.com&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> user = <span class="string">&#x27;admin&#x27;</span>;&lt;/script&gt;</span><br><span class="line">子窗口：</span><br><span class="line"> &lt;script&gt;</span><br><span class="line"><span class="built_in">document</span>.domain = <span class="string">&#x27;domain.com&#x27;</span>;</span><br><span class="line"><span class="comment">// 获取父窗口中变量</span></span><br><span class="line">alert(<span class="string">&#x27;get js data from parent ---&gt; &#x27;</span> + <span class="built_in">window</span>.parent.user);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="3、location-hash-iframe"><a href="#3、location-hash-iframe" class="headerlink" title="3、location.hash + iframe"></a><strong>3、location.hash + iframe</strong></h4><p>实现原理： a欲与b跨域相互通信，通过中间页c来实现。<br>三个页面，不同域之间利用iframe的location.hash传值，相同域之间直接js访问来通信。<br>具体实现：A域：a.html -&gt; B域：b.html -&gt; A域：c.html，a与b不同域只能通过hash值单向通信，b与c也不同域也只能单向通信，但c与a同域，所以c可通过parent.parent访问a页面所有对象。</p>
+<h4 id="4、-window-name-iframe跨域"><a href="#4、-window-name-iframe跨域" class="headerlink" title="4、 window.name + iframe跨域"></a><strong>4、 window.name + iframe跨域</strong></h4><p>window.name属性的独特之处：name值在不同的页面（甚至不同域名）加载后依旧存在，并且可以支持非常长的 name 值（2MB）。<br>总结：通过iframe的src属性由外域转向本地域，跨域数据即由iframe的window.name从外域传递到本地域。这个就巧妙地绕过了浏览器的跨域访问限制，但同时它又是安全操作。</p>
+<h4 id="5、-postMessage跨域"><a href="#5、-postMessage跨域" class="headerlink" title="5、 postMessage跨域"></a><strong>5、 postMessage跨域</strong></h4><p>postMessage是HTML5 XMLHttpRequest Level 2中的API，且是为数不多可以跨域操作的window属性之一，它可用于解决以下方面的问题：<br>a.） 页面和其打开的新窗口的数据传递<br>b.） 多窗口之间消息传递<br>c.） 页面与嵌套的iframe消息传递<br>d.） 上面三个场景的跨域数据传递<br>用法：postMessage(data,origin)方法接受两个参数<br>data： html5规范支持任意基本类型或可复制的对象，但部分浏览器只支持字符串，所以传参时最好用JSON.stringify()序列化。<br>origin： 协议+主机+端口号，也可以设置为”*”，表示可以传递给任意窗口，如果要指定和当前窗口同源的话设置为”/“。</p>
+<h4 id="6、-跨域资源共享（CORS）"><a href="#6、-跨域资源共享（CORS）" class="headerlink" title="6、 跨域资源共享（CORS）"></a><strong>6、 跨域资源共享（CORS）</strong></h4><p>普通跨域请求：只服务端设置Access-Control-Allow-Origin即可，前端无须设置，若要带cookie请求：前后端都需要设置。<br>需注意的是：<br>由于同源策略的限制，所读取的cookie为跨域请求接口所在域的cookie，而非当前页。<br>如果想实现当前页cookie的写入，参考七、nginx反向代理中设置proxy_cookie_domain 和 八、NodeJs中间件代理中cookieDomainRewrite参数的设置。</p>
+<h4 id="7、-nginx代理跨域"><a href="#7、-nginx代理跨域" class="headerlink" title="7、 nginx代理跨域"></a><strong>7、 nginx代理跨域</strong></h4><h4 id="8、-nodejs中间件代理跨域"><a href="#8、-nodejs中间件代理跨域" class="headerlink" title="8、 nodejs中间件代理跨域"></a><strong>8、 nodejs中间件代理跨域</strong></h4><h4 id="9、-WebSocket协议跨域"><a href="#9、-WebSocket协议跨域" class="headerlink" title="9、 WebSocket协议跨域"></a><strong>9、 WebSocket协议跨域</strong></h4><h3 id="10、移动端适配方案"><a href="#10、移动端适配方案" class="headerlink" title="10、移动端适配方案"></a>10、移动端适配方案</h3><p><strong>viewport 适配</strong></p>
+<p><strong>vw 适配（部分等比缩放）</strong></p>
+<ol>
+<li>开发者拿到设计稿（假设设计稿尺寸为750px，设计稿的元素标注是基于此宽度标注）</li>
+<li>开始开发，对设计稿的标注进行转换，把px换成vw。比如页面元素字体标注的大小是32px，换成vw为 (100/750)*32 vw</li>
+<li>对于需要等比缩放的元素，CSS使用转换后的单位</li>
+<li>对于不需要缩放的元素，比如边框阴影，使用固定单位px</li>
+</ol>
+<p><strong>rem 适配</strong></p>
+<ol>
+<li>开发者拿到设计稿（假设设计稿尺寸为750px，设计稿的元素标是基于此宽度标注）</li>
+<li>开始开发，对设计稿的标注进行转换</li>
+<li>对于需要等比缩放的元素，CSS使用转换后的单位</li>
+<li>对于不需要缩放的元素，比如边框阴影，使用固定单位px</li>
+</ol>
+<p><strong>弹性盒适配（合理布局）</strong></p>
+<h3 id="11、水平垂直居中"><a href="#11、水平垂直居中" class="headerlink" title="11、水平垂直居中"></a>11、水平垂直居中</h3><p><img src="/images/loading.gif" data-original="https://img.imgdb.cn/item/608ab573d1a9ae528fcf9093.png" alt="https://img.imgdb.cn/item/608ab573d1a9ae528fcf9093.png"></p>
+<h3 id="12、两种盒模型及转换"><a href="#12、两种盒模型及转换" class="headerlink" title="12、两种盒模型及转换"></a>12、两种盒模型及转换</h3><h4 id="标准模式下的盒模型-content-box"><a href="#标准模式下的盒模型-content-box" class="headerlink" title="标准模式下的盒模型: content-box"></a>标准模式下的盒模型: content-box</h4><p><code>content-box</code>： padding和border不被包含在定义的width和height之内。对象的实际宽度就等于设置的width值，即使定义有border和padding也不会改变对象的实际宽度，即 ( Element width = width )<br>此属性表现为标准模式下的盒模型。</p>
+<h4 id="怪异模式（IE模式）下的盒模型-border-box"><a href="#怪异模式（IE模式）下的盒模型-border-box" class="headerlink" title="怪异模式（IE模式）下的盒模型:border-box"></a>怪异模式（IE模式）下的盒模型:border-box</h4><p><code>border-box</code>： padding和border被包含在定义的width和height之内。对象的实际宽度等于设置的width值和border、padding之和，即 ( Element width = width + border + padding )<br>此属性表现为怪异模式下的盒模型。</p>
+<h4 id="CSS如何设置两种模型？（用到CSS3的box-sizing）"><a href="#CSS如何设置两种模型？（用到CSS3的box-sizing）" class="headerlink" title="CSS如何设置两种模型？（用到CSS3的box-sizing）"></a>CSS如何设置两种模型？（用到CSS3的box-sizing）</h4><ul>
+<li><strong>标准模型：box-sizing: content-box;</strong></li>
+<li><strong>怪异模式（IE模式）：box-sizing:border-box;</strong></li>
+</ul>
+<h3 id="13、vuex"><a href="#13、vuex" class="headerlink" title="13、vuex"></a>13、vuex</h3><p><strong>Vuex 主要有四部分：</strong></p>
+<ol>
+<li>state：包含了<code>store</code>中存储的各个状态。</li>
+<li>getter: 类似于 Vue 中的计算属性，根据其他 getter 或 state 计算返回值。</li>
+<li>mutation: 一组方法，是改变<code>store</code>中状态的执行者，<strong>只能是同步操作</strong>。</li>
+<li>action: 一组方法，其中可以<strong>包含异步操作</strong>。</li>
+</ol>
+<p><strong>1、流程顺序</strong></p>
+<p>“相应视图—&gt;修改State”拆分成两部分，视图触发Action，Action再触发Mutation。</p>
+<p><strong>2、角色定位</strong></p>
+<p>基于流程顺序，二者扮演不同的角色。</p>
+<p>Mutation：专注于修改State，理论上是修改State的唯一途径。</p>
+<p>Action：业务代码、异步请求。</p>
+<p><strong>3、限制</strong></p>
+<p>角色不同，二者有不同的限制。</p>
+<p>Mutation：必须同步执行。</p>
+<p>Action：可以异步，但不能直接操作State。</p>
+<h3 id="14、组件中的data用箭头函数行不行？"><a href="#14、组件中的data用箭头函数行不行？" class="headerlink" title="14、组件中的data用箭头函数行不行？"></a>14、组件中的data用箭头函数行不行？</h3><p>使用箭头函数给data: () =&gt; {} this指向undefined的时候，<strong>（无法获取实例）</strong>是会赋值给vm._data，但是他会相当于一个全局的，只要你不刷新页面他就会缓存你的data。</p>
+<p>如果我们使用<code>data() &#123;&#125;this</code>指向Vm实例，所以他会随着实例更新。</p>
+<h3 id="15、前端禁用cookie"><a href="#15、前端禁用cookie" class="headerlink" title="15、前端禁用cookie"></a>15、前端禁用cookie</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.navigator.cookieEnabled = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+
+<p> 这样设置以后, 浏览器就不会接受和保存服务器传过来的cookie, 也就不会在发起HTTP请求时向服务器发送cookie.</p>
+<h3 id="16、script标签为什么放后面？"><a href="#16、script标签为什么放后面？" class="headerlink" title="16、script标签为什么放后面？"></a>16、script标签为什么放后面？</h3><p>所以提出了一种更modern的方式：使用async和defer。80%的现代浏览器都认识async和defer属性，这两个属性能让浏览器做到一边下载JS(还是只能同时下载两个JS)，一边解析HTML。他的优点不是增加JS的并发下载数量，而是做到下载时不block解析HTML。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span> src=<span class="string">&quot;path/to/script1.js&quot;</span> <span class="keyword">async</span>&gt;&lt;/script&gt;  </span><br><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span> src=<span class="string">&quot;path/to/script2.js&quot;</span> <span class="keyword">async</span>&gt;&lt;/script&gt;  </span><br></pre></td></tr></table></figure>
+
+<p>如上图我们同时引入两条外部js文件时：<br>　　async属性能保证script会异步执行，只要下载完就执行，这会导致script2.js可能先于script1.js执行（如果script2.js比较大，下载慢）。<br>defer属性就能保证script有序执行，script1.js先执行，script2.js后执行。</p>
+<h3 id="17、合并两个有序数组"><a href="#17、合并两个有序数组" class="headerlink" title="17、合并两个有序数组"></a>17、合并两个有序数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">1</span>, <span class="number">5</span>];</span><br><span class="line">       <span class="keyword">let</span> arr2 = [<span class="number">2</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">8</span>];</span><br><span class="line">       <span class="keyword">const</span> r = mergeArray(arr1, arr2);</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">function</span> <span class="title">mergeArray</span>(<span class="params">arr1, arr2</span>) </span>&#123;</span><br><span class="line">           <span class="keyword">const</span> len1 = arr1.length,</span><br><span class="line">               len2 = arr2.length;</span><br><span class="line">           <span class="keyword">let</span> index1 = <span class="number">0</span>,</span><br><span class="line">               index2 = <span class="number">0</span>;</span><br><span class="line">           <span class="keyword">let</span> res = [];</span><br><span class="line">           <span class="keyword">while</span> (index1 &lt; len1 &amp;&amp; index2 &lt; len2) &#123;</span><br><span class="line">               <span class="keyword">if</span> (arr1[index1] &lt;= arr2[index2]) &#123;</span><br><span class="line">                   res.push(arr1[index1]);</span><br><span class="line">                   index1++;</span><br><span class="line">               &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                   res.push(arr2[index2]);</span><br><span class="line">                   index2++;</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">while</span> (index1 &lt; len1) &#123;</span><br><span class="line">               res.push(arr1[index1]);</span><br><span class="line">               index1++;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">while</span> (index2 &lt; len2) &#123;</span><br><span class="line">               res.push(arr2[index2]);</span><br><span class="line">               index2++;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">return</span> res;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="built_in">console</span>.log(r)</span><br></pre></td></tr></table></figure>
+
+<h3 id="18、原型链"><a href="#18、原型链" class="headerlink" title="18、原型链"></a>18、原型链</h3><blockquote>
+<p>当访问一个对象的某个属性时，会先在这个对象本身属性上查找，如果没有找到，则会去它的__proto__隐式原型上查找，即它的构造函数的prototype，如果还没有找到就会再在构造函数的<code>prototype</code>的__<code>proto</code>__中查找，这样一层一层向上查找就会形成一个链式结构，我们称为原型链。</p>
+</blockquote>
+<p><img src="/images/loading.gif" data-original="https://img.imgdb.cn/item/608ab573d1a9ae528fcf90d5.png"></p>
+<h3 id="19、数组扁平化"><a href="#19、数组扁平化" class="headerlink" title="19、数组扁平化"></a>19、数组扁平化</h3><h3 id="20、vue实现双向绑定"><a href="#20、vue实现双向绑定" class="headerlink" title="20、vue实现双向绑定"></a>20、vue实现双向绑定</h3><p>讲了Vue2.x中的<code>Object.defineProperty</code>的 get 与 set，劫持对象属性，监听数据变化，实现双向绑定，新版本用了<code>proxy</code></p>
+<p>。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">潇雷好棒哦</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://xlcopy.github.io/2021/04/29/%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E9%A2%98/">https://xlcopy.github.io/2021/04/29/%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E9%A2%98/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://xlcopy.github.io" target="_blank">薛定谔的快乐</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/vue/">vue</a><a class="post-meta__tags" href="/tags/http/">http</a><a class="post-meta__tags" href="/tags/css3/">css3</a><a class="post-meta__tags" href="/tags/ES6/">ES6</a></div><div class="post_share"><div class="social-share" data-image="https://img.imgdb.cn/item/607afe898322e6675c6d4269.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/06/21/React-antd%E7%9A%84%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5%E5%92%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98/"><img class="prev-cover" src="/images/loading.gif" data-original="https://pic.imgdb.cn/item/60d096fb844ef46bb29adefc.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">React---antd的按需引入和自定义主题</div></div></a></div><div class="next-post pull-right"><a href="/2021/04/17/%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%EF%BC%88js%EF%BC%89/"><img class="next-cover" src="/images/loading.gif" data-original="https://img.imgdb.cn/item/607afe898322e6675c6d426f.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">十大排序算法（js）</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/images/loading.gif" data-original="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">潇雷好棒哦</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">只想做点微小的事。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81localStorage%EF%BC%8CsessionStorage%EF%BC%8Ccookie%E5%8C%BA%E5%88%AB"><span class="toc-text">1、localStorage，sessionStorage，cookie区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81http2%E6%96%B0%E7%89%B9%E6%80%A7"><span class="toc-text">2、http2新特性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%88%86%E5%B8%A7"><span class="toc-text">1.二进制分帧</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%8D%95%E4%B8%80%E9%95%BF%E8%BF%9E%E6%8E%A5"><span class="toc-text">2. 单一长连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8"><span class="toc-text">3. 多路复用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%A4%B4%E9%83%A8%E5%8E%8B%E7%BC%A9"><span class="toc-text">4.头部压缩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%8E%A8%E9%80%81"><span class="toc-text">5.服务端推送</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81SASS%E5%8A%9F%E8%83%BD"><span class="toc-text">3、SASS功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81vue-router-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4"><span class="toc-text">4、vue router 的使用步骤</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81ES6%E6%96%B0%E7%89%B9%E6%80%A7"><span class="toc-text">5、ES6新特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81Set%E3%80%81WeakSet%E3%80%81Map%E3%80%81WeakMap"><span class="toc-text">6、Set、WeakSet、Map、WeakMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81reduce%E5%AE%9E%E7%8E%B0%E6%95%B0%E7%BB%84%E6%B1%82%E5%92%8C"><span class="toc-text">7、reduce实现数组求和</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81vue-router%E4%B8%AD%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F%E8%A7%A3%E9%87%8A%E5%8E%9F%E7%90%86%EF%BC%9F"><span class="toc-text">8、vue router中两种模式的区别？解释原理？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-text">原理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9%E3%80%81%E8%B7%A8%E5%9F%9F%E7%9B%B8%E5%85%B3"><span class="toc-text">9、跨域相关</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%9A"><span class="toc-text">同源策略：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E9%80%9A%E8%BF%87jsonp%E8%B7%A8%E5%9F%9F"><span class="toc-text">1、通过jsonp跨域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81-document-domain-iframe%E8%B7%A8%E5%9F%9F"><span class="toc-text">2、 document.domain + iframe跨域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81location-hash-iframe"><span class="toc-text">3、location.hash + iframe</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81-window-name-iframe%E8%B7%A8%E5%9F%9F"><span class="toc-text">4、 window.name + iframe跨域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%E3%80%81-postMessage%E8%B7%A8%E5%9F%9F"><span class="toc-text">5、 postMessage跨域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6%E3%80%81-%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%88CORS%EF%BC%89"><span class="toc-text">6、 跨域资源共享（CORS）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7%E3%80%81-nginx%E4%BB%A3%E7%90%86%E8%B7%A8%E5%9F%9F"><span class="toc-text">7、 nginx代理跨域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8%E3%80%81-nodejs%E4%B8%AD%E9%97%B4%E4%BB%B6%E4%BB%A3%E7%90%86%E8%B7%A8%E5%9F%9F"><span class="toc-text">8、 nodejs中间件代理跨域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9%E3%80%81-WebSocket%E5%8D%8F%E8%AE%AE%E8%B7%A8%E5%9F%9F"><span class="toc-text">9、 WebSocket协议跨域</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10%E3%80%81%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E6%96%B9%E6%A1%88"><span class="toc-text">10、移动端适配方案</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11%E3%80%81%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD"><span class="toc-text">11、水平垂直居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12%E3%80%81%E4%B8%A4%E7%A7%8D%E7%9B%92%E6%A8%A1%E5%9E%8B%E5%8F%8A%E8%BD%AC%E6%8D%A2"><span class="toc-text">12、两种盒模型及转换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E7%9B%92%E6%A8%A1%E5%9E%8B-content-box"><span class="toc-text">标准模式下的盒模型: content-box</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F%EF%BC%88IE%E6%A8%A1%E5%BC%8F%EF%BC%89%E4%B8%8B%E7%9A%84%E7%9B%92%E6%A8%A1%E5%9E%8B-border-box"><span class="toc-text">怪异模式（IE模式）下的盒模型:border-box</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%9E%8B%EF%BC%9F%EF%BC%88%E7%94%A8%E5%88%B0CSS3%E7%9A%84box-sizing%EF%BC%89"><span class="toc-text">CSS如何设置两种模型？（用到CSS3的box-sizing）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13%E3%80%81vuex"><span class="toc-text">13、vuex</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14%E3%80%81%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84data%E7%94%A8%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E8%A1%8C%E4%B8%8D%E8%A1%8C%EF%BC%9F"><span class="toc-text">14、组件中的data用箭头函数行不行？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15%E3%80%81%E5%89%8D%E7%AB%AF%E7%A6%81%E7%94%A8cookie"><span class="toc-text">15、前端禁用cookie</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16%E3%80%81script%E6%A0%87%E7%AD%BE%E4%B8%BA%E4%BB%80%E4%B9%88%E6%94%BE%E5%90%8E%E9%9D%A2%EF%BC%9F"><span class="toc-text">16、script标签为什么放后面？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17%E3%80%81%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84"><span class="toc-text">17、合并两个有序数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18%E3%80%81%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="toc-text">18、原型链</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19%E3%80%81%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96"><span class="toc-text">19、数组扁平化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20%E3%80%81vue%E5%AE%9E%E7%8E%B0%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A"><span class="toc-text">20、vue实现双向绑定</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/06/21/React-antd%E7%9A%84%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5%E5%92%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98/" title="React---antd的按需引入和自定义主题"><img src="/images/loading.gif" data-original="https://pic.imgdb.cn/item/60d096fb844ef46bb29adefc.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="React---antd的按需引入和自定义主题"/></a><div class="content"><a class="title" href="/2021/06/21/React-antd%E7%9A%84%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5%E5%92%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98/" title="React---antd的按需引入和自定义主题">React---antd的按需引入和自定义主题</a><time datetime="2021-06-21T13:30:55.000Z" title="发表于 2021-06-21 21:30:55">2021-06-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/29/%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E9%A2%98/" title="一些面试题"><img src="/images/loading.gif" data-original="https://img.imgdb.cn/item/607afe898322e6675c6d4269.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一些面试题"/></a><div class="content"><a class="title" href="/2021/04/29/%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E9%A2%98/" title="一些面试题">一些面试题</a><time datetime="2021-04-29T13:34:43.000Z" title="发表于 2021-04-29 21:34:43">2021-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/17/%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%EF%BC%88js%EF%BC%89/" title="十大排序算法（js）"><img src="/images/loading.gif" data-original="https://img.imgdb.cn/item/607afe898322e6675c6d426f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="十大排序算法（js）"/></a><div class="content"><a class="title" href="/2021/04/17/%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%EF%BC%88js%EF%BC%89/" title="十大排序算法（js）">十大排序算法（js）</a><time datetime="2021-04-17T15:29:29.000Z" title="发表于 2021-04-17 23:29:29">2021-04-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/17/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/" title="二维数组中的查找"><img src="/images/loading.gif" data-original="https://img.imgdb.cn/item/6051ac05524f85ce2995b653.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="二维数组中的查找"/></a><div class="content"><a class="title" href="/2021/03/17/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/" title="二维数组中的查找">二维数组中的查找</a><time datetime="2021-03-17T06:48:10.000Z" title="发表于 2021-03-17 14:48:10">2021-03-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/15/%E5%89%91%E6%8C%87-Offer-31-%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/" title="剑指 Offer 31. 栈的压入、弹出序列"><img src="/images/loading.gif" data-original="https://img.imgdb.cn/item/604f5dc75aedab222cb5598a.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="剑指 Offer 31. 栈的压入、弹出序列"/></a><div class="content"><a class="title" href="/2021/03/15/%E5%89%91%E6%8C%87-Offer-31-%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/" title="剑指 Offer 31. 栈的压入、弹出序列">剑指 Offer 31. 栈的压入、弹出序列</a><time datetime="2021-03-15T12:54:29.000Z" title="发表于 2021-03-15 20:54:29">2021-03-15</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://img.imgdb.cn/item/607afe898322e6675c6d4269.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 潇雷好棒哦</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body></html>
